@@ -1,15 +1,22 @@
-# Bryan N.
+<h1 align="center">Bryan</h1>
 
-Cloud engineer and solo founder from Belgium.
+<p align="center"><strong>Cloud engineer · Solo founder · Based in Belgium</strong></p>
 
-I build developer tools and infrastructure that people can understand, own, and replace.
+<p align="center">
+  I build developer tools and production infrastructure that stay understandable, portable, and yours.
+</p>
 
-[Website](https://bryann2k.dev) · [Build log](https://bryann2k.dev/log) · [X](https://x.com/bryann2k_dev) · [Email](mailto:hello@bryann2k.dev)
+<p align="center">
+  <a href="https://bryann2k.dev">Website</a> ·
+  <a href="https://bryann2k.dev/log">Build log</a> ·
+  <a href="https://x.com/bryann2k_dev">X</a> ·
+  <a href="mailto:hello@bryann2k.dev">Email</a>
+</p>
 
 ## Current work
 
 - [**Maestro**](https://github.com/BRYANN2K/maestro) — A spec-driven development workflow for the terminal, from idea to reviewed merge.
-- [**StackDeploy**](https://stackdeploy.app) — GitOps deployments to Kubernetes infrastructure you own. Currently in development.
+- [**StackDeploy**](https://stackdeploy.app) — Production Kubernetes on EU providers, managed for you and owned by you, with one dashboard for the whole cluster. Early access is open.
 
 ## Background
 
