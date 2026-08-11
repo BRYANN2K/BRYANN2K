@@ -20,12 +20,15 @@ I prefer specs before code, standard tools over proprietary platforms, and worki
 ## Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=linux%2Cdocker%2Ckubernetes%2Cterraform%2Cgo%2Cpostgres%2Cts%2Castro%2Cgithubactions&amp;theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=linux%2Cdocker%2Ckubernetes%2Cterraform%2Cgo%2Cpostgres%2Cts%2Castro%2Cgithubactions&amp;theme=light">
-  <img src="https://skillicons.dev/icons?i=linux%2Cdocker%2Ckubernetes%2Cterraform%2Cgo%2Cpostgres%2Cts%2Castro%2Cgithubactions&amp;theme=light" alt="Linux, Docker, Kubernetes, Terraform, Go, PostgreSQL, TypeScript, Astro, and GitHub Actions">
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=bash%2Clinux%2Cpy%2Cgo%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cpostgres%2Cmongodb%2Credis%2Cts%2Cgithubactions%2Caws%2Copenstack%2Ccloudflare&amp;perline=8&amp;theme=dark">
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=bash%2Clinux%2Cpy%2Cgo%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cpostgres%2Cmongodb%2Credis%2Cts%2Cgithubactions%2Caws%2Copenstack%2Ccloudflare&amp;perline=8&amp;theme=light">
+  <img src="https://skillicons.dev/icons?i=bash%2Clinux%2Cpy%2Cgo%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cpostgres%2Cmongodb%2Credis%2Cts%2Cgithubactions%2Caws%2Copenstack%2Ccloudflare&amp;perline=8&amp;theme=light" alt="Shell, Linux, Python, Go, Docker, Kubernetes, Terraform, Ansible, PostgreSQL, MongoDB, Redis, TypeScript, GitHub Actions, AWS, OpenStack, and Cloudflare">
 </picture>
 
-Argo CD · GitOps · Cloudflare
+**Languages** — Shell, Python, Go, TypeScript<br>
+**Infrastructure** — Linux, Docker, Kubernetes, Terraform, Ansible, Argo CD, GitHub Actions<br>
+**Data** — PostgreSQL, MongoDB, Redis<br>
+**Cloud** — AWS, OpenStack, DigitalOcean, Cloudflare
 
 ## Certifications
 
