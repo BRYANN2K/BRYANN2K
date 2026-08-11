@@ -9,8 +9,7 @@ I build developer tools and infrastructure that people can understand, own, and 
 ## Current work
 
 - [**Maestro**](https://github.com/BRYANN2K/maestro) — A spec-driven development workflow for the terminal, from idea to reviewed merge.
-- [**StackDeploy**](https://bryann2k.dev/projects/stackdeploy) — GitOps deployments to Kubernetes infrastructure you own. Currently in development.
-- [**layout-autoswitch**](https://github.com/BRYANN2K/layout-autoswitch) — A user-level Shell service that switches GNOME layouts when Bluetooth keyboards connect or disconnect.
+- [**StackDeploy**](https://stackdeploy.app) — GitOps deployments to Kubernetes infrastructure you own. Currently in development.
 
 ## Background
 
