@@ -27,15 +27,18 @@ I prefer specs before code, standard tools over proprietary platforms, and worki
 ## Stack
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=bash%2Clinux%2Cpy%2Cgo%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cpostgres%2Cmongodb%2Credis%2Cts%2Cgithubactions%2Caws%2Copenstack%2Ccloudflare&amp;perline=8&amp;theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=bash%2Clinux%2Cpy%2Cgo%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cpostgres%2Cmongodb%2Credis%2Cts%2Cgithubactions%2Caws%2Copenstack%2Ccloudflare&amp;perline=8&amp;theme=light">
-  <img src="https://skillicons.dev/icons?i=bash%2Clinux%2Cpy%2Cgo%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cpostgres%2Cmongodb%2Credis%2Cts%2Cgithubactions%2Caws%2Copenstack%2Ccloudflare&amp;perline=8&amp;theme=light" alt="Shell, Linux, Python, Go, Docker, Kubernetes, Terraform, Ansible, PostgreSQL, MongoDB, Redis, TypeScript, GitHub Actions, AWS, OpenStack, and Cloudflare">
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=bash%2Cpy%2Cgo%2Cts%2Clinux%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cgithubactions%2Cpostgres%2Cmongodb%2Credis%2Cprometheus%2Cgrafana%2Caws%2Copenstack%2Ccloudflare&amp;perline=9&amp;theme=dark">
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=bash%2Cpy%2Cgo%2Cts%2Clinux%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cgithubactions%2Cpostgres%2Cmongodb%2Credis%2Cprometheus%2Cgrafana%2Caws%2Copenstack%2Ccloudflare&amp;perline=9&amp;theme=light">
+  <img src="https://skillicons.dev/icons?i=bash%2Cpy%2Cgo%2Cts%2Clinux%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cgithubactions%2Cpostgres%2Cmongodb%2Credis%2Cprometheus%2Cgrafana%2Caws%2Copenstack%2Ccloudflare&amp;perline=9&amp;theme=light" alt="Shell, Python, Go, TypeScript, Linux, Docker, Kubernetes, Terraform, Ansible, GitHub Actions, PostgreSQL, MongoDB, Redis, Prometheus, Grafana, AWS, OpenStack, and Cloudflare">
 </picture>
 
 **Languages** — Shell, Python, Go, TypeScript<br>
-**Infrastructure** — Linux, Docker, Kubernetes, Terraform, Ansible, Argo CD, GitHub Actions<br>
+**Platform** — Linux, Docker, Kubernetes, K3s, Helm, Kustomize, Traefik<br>
+**Delivery & automation** — Terraform, OpenTofu, Ansible, Argo CD, GitHub Actions<br>
+**Security & access** — HashiCorp Vault, External Secrets Operator, Authelia, Kyverno, Falco, Tailscale, Gitleaks, Trivy<br>
+**Observability & recovery** — Prometheus, Grafana, Loki, Velero<br>
 **Data** — PostgreSQL, MongoDB, Redis<br>
-**Cloud** — AWS, OpenStack, DigitalOcean, Cloudflare
+**Cloud & edge** — AWS, Infomaniak OpenStack, DigitalOcean, Cloudflare
 
 ## Certifications
 
