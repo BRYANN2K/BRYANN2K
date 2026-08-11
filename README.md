@@ -17,10 +17,24 @@ My path started with a homelab in 2009, followed by five years in systems and ne
 
 I prefer specs before code, standard tools over proprietary platforms, and working systems over slide decks.
 
-## Working with
+## Stack
 
-Go, Linux, Kubernetes, Terraform, Docker, Argo CD, TypeScript, Astro, and PostgreSQL.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=linux%2Cdocker%2Ckubernetes%2Cterraform%2Cgo%2Cpostgres%2Cts%2Castro%2Cgithubactions&amp;theme=dark">
+  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=linux%2Cdocker%2Ckubernetes%2Cterraform%2Cgo%2Cpostgres%2Cts%2Castro%2Cgithubactions&amp;theme=light">
+  <img src="https://skillicons.dev/icons?i=linux%2Cdocker%2Ckubernetes%2Cterraform%2Cgo%2Cpostgres%2Cts%2Castro%2Cgithubactions&amp;theme=light" alt="Linux, Docker, Kubernetes, Terraform, Go, PostgreSQL, TypeScript, Astro, and GitHub Actions">
+</picture>
+
+Argo CD · GitOps · Cloudflare
 
 ## Certifications
 
 CKA (2025) · HashiCorp Terraform Associate (2025) · LFCS (2023)
+
+## Contributions
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BRYANN2K/BRYANN2K/output/commit-invaders-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BRYANN2K/BRYANN2K/output/commit-invaders.svg">
+  <img src="https://raw.githubusercontent.com/BRYANN2K/BRYANN2K/output/commit-invaders.svg" width="100%" alt="Space Invaders animation generated from Bryan's GitHub contribution graph">
+</picture>

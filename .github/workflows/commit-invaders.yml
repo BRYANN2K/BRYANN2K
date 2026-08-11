@@ -1,0 +1,31 @@
+name: Generate commit invaders
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: commit-invaders
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Generate contribution animation
+        uses: Goblinlordx/commit-invaders@49ce2ef7dd90272cd98dd06ab39dfeede05897c6 # v1.2.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_user_name: ${{ github.repository_owner }}
+          output_branch: output
+          output_file: commit-invaders.svg
+          no_scoreboard: true
