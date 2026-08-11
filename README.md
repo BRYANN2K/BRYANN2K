@@ -33,7 +33,7 @@ I prefer specs before code, standard tools over proprietary platforms, and worki
 </picture>
 
 **Languages** — Shell, Python, Go, TypeScript<br>
-**Platform** — Linux, Docker, Kubernetes, K3s, Helm, Kustomize, Traefik<br>
+**Platform** — Linux, Docker, Kubernetes, Helm, Kustomize, Traefik<br>
 **Delivery & automation** — Terraform, OpenTofu, Ansible, Argo CD, GitHub Actions<br>
 **Security & access** — HashiCorp Vault, External Secrets Operator, Authelia, Kyverno, Falco, Tailscale, Gitleaks, Trivy<br>
 **Observability & recovery** — Prometheus, Grafana, Loki, Velero<br>
