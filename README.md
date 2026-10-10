@@ -1,53 +1,80 @@
-<h1 align="center">Bryan</h1>
-
-<p align="center"><strong>Cloud engineer · Solo founder · Based in Belgium</strong></p>
-
-<p align="center">
-  I build developer tools and production infrastructure that stay understandable, portable, and yours.
-</p>
-
-<p align="center">
-  <a href="https://bryann2k.dev">Website</a> ·
-  <a href="https://bryann2k.dev/log">Build log</a> ·
-  <a href="https://x.com/bryann2k_dev">X</a> ·
-  <a href="mailto:hello@bryann2k.dev">Email</a>
-</p>
-
-## Current work
-
-- [**Maestro**](https://github.com/BRYANN2K/maestro) — A spec-driven development workflow for the terminal, from idea to reviewed merge.
-- [**StackDeploy**](https://stackdeploy.app) — Production Kubernetes on EU providers, managed for you and owned by you, with one dashboard for the whole cluster. Early access is open.
-
-## Background
-
-My path started with a homelab in 2009, followed by five years in systems and network administration, then cloud engineering. I now build products around ownership, open standards, and no lock-in.
-
-I prefer specs before code, standard tools over proprietary platforms, and working systems over slide decks.
-
-## Stack
+<div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=bash%2Cpy%2Cgo%2Cts%2Clinux%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cgithubactions%2Cpostgres%2Cmongodb%2Credis%2Cprometheus%2Cgrafana%2Caws%2Copenstack%2Ccloudflare&amp;perline=9&amp;theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=bash%2Cpy%2Cgo%2Cts%2Clinux%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cgithubactions%2Cpostgres%2Cmongodb%2Credis%2Cprometheus%2Cgrafana%2Caws%2Copenstack%2Ccloudflare&amp;perline=9&amp;theme=light">
-  <img src="https://skillicons.dev/icons?i=bash%2Cpy%2Cgo%2Cts%2Clinux%2Cdocker%2Ckubernetes%2Cterraform%2Cansible%2Cgithubactions%2Cpostgres%2Cmongodb%2Credis%2Cprometheus%2Cgrafana%2Caws%2Copenstack%2Ccloudflare&amp;perline=9&amp;theme=light" alt="Shell, Python, Go, TypeScript, Linux, Docker, Kubernetes, Terraform, Ansible, GitHub Actions, PostgreSQL, MongoDB, Redis, Prometheus, Grafana, AWS, OpenStack, and Cloudflare">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/name-dark.svg">
+  <img src="assets/name-light.svg" width="520" alt="Bryan Nicodème">
 </picture>
 
-**Languages** — Shell, Python, Go, TypeScript<br>
-**Platform** — Linux, Docker, Kubernetes, Helm, Kustomize, Traefik<br>
-**Delivery & automation** — Terraform, OpenTofu, Ansible, Argo CD, GitHub Actions<br>
-**Security & access** — HashiCorp Vault, External Secrets Operator, Authelia, Kyverno, Falco, Tailscale, Gitleaks, Trivy<br>
-**Observability & recovery** — Prometheus, Grafana, Loki, Velero<br>
-**Data** — PostgreSQL, MongoDB, Redis<br>
-**Cloud & edge** — AWS, Infomaniak OpenStack, DigitalOcean, Cloudflare
+Product engineer. I build products from idea to production, interface to infrastructure.<br>
+<sub>Brussels · Cebu City</sub>
 
-## Certifications
+<img src="assets/available.svg" width="18" height="18" align="top" alt="">&nbsp;**Open to work.** Freelance or full-time, remote on EU hours. [Contact me →](https://bryann2k.dev/#contact)
 
-CKA (2025) · HashiCorp Terraform Associate (2025) · LFCS (2023)
+<sub>[bryann2k.dev](https://bryann2k.dev) &nbsp;·&nbsp; [Build log](https://bryann2k.dev/log) &nbsp;·&nbsp; [X](https://x.com/bryann2k_dev) &nbsp;·&nbsp; [hello@bryann2k.dev](mailto:hello@bryann2k.dev)</sub>
 
-## Contributions
+#### Selected work
+
+[**Stipulate**](https://github.com/BRYANN2K/stipulate-skills)<br>
+Spec-driven development for AI coding agents, from exploration to verified delivery.
+
+[**Maestro**](https://github.com/BRYANN2K/maestro)<br>
+An AI spec-driven harness for terminal development.
+
+[**StackDeploy**](https://bryann2k.dev/projects/stackdeploy) <sub>paused</sub><br>
+Your own Kubernetes cluster, with the ease of a PaaS.
+
+#### Before that
+
+Five years running systems and networks, then a year as a freelance cloud engineer: 11 clients, mostly infrastructure audits, and 3 builds.
+
+Specs before code. Standard tools over proprietary platforms. Working systems over slide decks.
+
+#### Stack
+
+<img src="https://cdn.simpleicons.org/typescript/8b949e" width="20" height="20" alt="TypeScript" title="TypeScript">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/react/8b949e" width="20" height="20" alt="React" title="React">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/astro/8b949e" width="20" height="20" alt="Astro" title="Astro">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/go/8b949e" width="20" height="20" alt="Go" title="Go">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/python/8b949e" width="20" height="20" alt="Python" title="Python">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/gnubash/8b949e" width="20" height="20" alt="Bash" title="Bash">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/postgresql/8b949e" width="20" height="20" alt="PostgreSQL" title="PostgreSQL">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/redis/8b949e" width="20" height="20" alt="Redis" title="Redis">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/mongodb/8b949e" width="20" height="20" alt="MongoDB" title="MongoDB">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/linux/8b949e" width="20" height="20" alt="Linux" title="Linux">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/docker/8b949e" width="20" height="20" alt="Docker" title="Docker">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/kubernetes/8b949e" width="20" height="20" alt="Kubernetes" title="Kubernetes">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/helm/8b949e" width="20" height="20" alt="Helm" title="Helm">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/traefikproxy/8b949e" width="20" height="20" alt="Traefik" title="Traefik">
+<br><br>
+<img src="https://cdn.simpleicons.org/terraform/8b949e" width="20" height="20" alt="Terraform" title="Terraform">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/opentofu/8b949e" width="20" height="20" alt="OpenTofu" title="OpenTofu">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/ansible/8b949e" width="20" height="20" alt="Ansible" title="Ansible">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/argo/8b949e" width="20" height="20" alt="Argo CD" title="Argo CD">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/githubactions/8b949e" width="20" height="20" alt="GitHub Actions" title="GitHub Actions">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/vault/8b949e" width="20" height="20" alt="Vault" title="Vault">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/tailscale/8b949e" width="20" height="20" alt="Tailscale" title="Tailscale">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/falco/8b949e" width="20" height="20" alt="Falco" title="Falco">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/trivy/8b949e" width="20" height="20" alt="Trivy" title="Trivy">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/prometheus/8b949e" width="20" height="20" alt="Prometheus" title="Prometheus">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/grafana/8b949e" width="20" height="20" alt="Grafana" title="Grafana">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/cloudflare/8b949e" width="20" height="20" alt="Cloudflare" title="Cloudflare">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/openstack/8b949e" width="20" height="20" alt="OpenStack" title="OpenStack">&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/digitalocean/8b949e" width="20" height="20" alt="DigitalOcean" title="DigitalOcean">
+
+<sub>Also AWS and Kyverno. Certified CKA (2025), HashiCorp Terraform Associate (2025), LFCS (2023).</sub>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/signature-dark.svg">
+  <img src="assets/signature-light.svg" width="150" alt="Bryan">
+</picture>
+
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BRYANN2K/BRYANN2K/output/commit-invaders-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BRYANN2K/BRYANN2K/output/commit-invaders.svg">
   <img src="https://raw.githubusercontent.com/BRYANN2K/BRYANN2K/output/commit-invaders.svg" width="100%" alt="Space Invaders animation generated from Bryan's GitHub contribution graph">
 </picture>
+
+</div>
