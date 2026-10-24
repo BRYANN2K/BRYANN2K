@@ -1,8 +1,11 @@
 name: Generate commit invaders
 
+# Paused: GitHub Actions is blocked by billing. Woodpecker runs this as
+# .woodpecker/commit-invaders.yaml. Restore the triggers below to switch back.
+#   schedule:
+#     - cron: '17 3 * * *'
+#   workflow_dispatch:
 on:
-  schedule:
-    - cron: '17 3 * * *'
   workflow_dispatch:
 
 permissions:
