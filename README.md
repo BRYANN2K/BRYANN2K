@@ -12,24 +12,52 @@ Product engineer. I build products from idea to production, interface to infrast
 
 <sub>[bryann2k.dev](https://bryann2k.dev) &nbsp;·&nbsp; [Build log](https://bryann2k.dev/log) &nbsp;·&nbsp; [X](https://x.com/bryann2k_dev) &nbsp;·&nbsp; [hello@bryann2k.dev](mailto:hello@bryann2k.dev)</sub>
 
+<br>
+
+<a href="https://github.com/BRYANN2K/cartouche"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/cartouche-dark.svg">
+  <img src="assets/cards/cartouche-light.svg" width="100%" alt="Cartouche: a free game launcher for Apple silicon Macs. Steam, Epic, GOG, Amazon, Windows installers and console games in one library.">
+</picture></a>
+
+<sub>[Website](https://cartouche.bryann2k.dev) &nbsp;·&nbsp; [Download](https://github.com/BRYANN2K/cartouche/releases/latest) &nbsp;·&nbsp; [Wine builds](https://github.com/BRYANN2K/cartouche-wine) &nbsp;·&nbsp; [Support on Ko-fi](https://ko-fi.com/bryann2k)</sub>
+
 #### Selected work
 
-[**Stipulate**](https://github.com/BRYANN2K/stipulate-skills)<br>
-Spec-driven development for AI coding agents, from exploration to verified delivery.
+<a href="https://github.com/BRYANN2K/stipulate-skills"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/stipulate-dark.svg">
+  <img src="assets/cards/stipulate-light.svg" width="32%" alt="Stipulate: spec-driven development for AI coding agents">
+</picture></a>&nbsp;
+<a href="https://github.com/BRYANN2K/maestro"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/maestro-dark.svg">
+  <img src="assets/cards/maestro-light.svg" width="32%" alt="Maestro: an AI spec-driven harness for terminal development">
+</picture></a>&nbsp;
+<a href="https://bryann2k.dev/projects/stackdeploy"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/stackdeploy-dark.svg">
+  <img src="assets/cards/stackdeploy-light.svg" width="32%" alt="StackDeploy (paused): your own Kubernetes cluster, with the ease of a PaaS">
+</picture></a>
 
-[**Maestro**](https://github.com/BRYANN2K/maestro)<br>
-An AI spec-driven harness for terminal development.
+#### Upstream
 
-[**StackDeploy**](https://bryann2k.dev/projects/stackdeploy) <sub>paused</sub><br>
-Your own Kubernetes cluster, with the ease of a PaaS.
+<!-- CONTRIBUTIONS:START -->
+<a href="https://github.com/search?type=pullrequests&q=is%3Apr%20is%3Amerged%20author%3ABRYANN2K%20-user%3ABRYANN2K">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/contributions-dark.svg">
+  <img src="assets/cards/contributions-light.svg" width="100%" alt="Upstream contributions: leoAnimesh/OpenClean, 2 merged">
+</picture>
+</a>
+<!-- CONTRIBUTIONS:END -->
 
-#### Before that
+#### Path
 
-Five years running systems and networks, then a year as a freelance cloud engineer: 11 clients, mostly infrastructure audits, and 3 builds.
+<a href="https://bryann2k.dev"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/path-dark.svg">
+  <img src="assets/cards/path-light.svg" width="100%" alt="Five years in systems and networks, a year as a freelance cloud engineer with 11 clients and 3 builds, now product engineer">
+</picture></a>
 
-Specs before code. Standard tools over proprietary platforms. Working systems over slide decks.
+<sub>Specs before code. Standard tools over proprietary platforms. Working systems over slide decks.</sub>
 
 #### Stack
+
 
 <img src="https://cdn.simpleicons.org/typescript/8b949e" width="20" height="20" alt="TypeScript" title="TypeScript">&nbsp;&nbsp;
 <img src="https://cdn.simpleicons.org/react/8b949e" width="20" height="20" alt="React" title="React">&nbsp;&nbsp;

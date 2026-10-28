@@ -1,0 +1,43 @@
+name: Build profile cards
+
+on:
+  schedule:
+    - cron: '37 4 * * *'
+  push:
+    branches: [main]
+    paths: ['scripts/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cards
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Install font tools
+        run: pip install --quiet fonttools brotli
+
+      - name: Build cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
+        run: python3 scripts/build_cards.py
+
+      - name: Commit if changed
+        run: |
+          git add README.md assets/cards
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "docs: refresh profile cards"
+          git push
