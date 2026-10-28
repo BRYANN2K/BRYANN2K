@@ -14,16 +14,19 @@ Product engineer. I build products from idea to production, interface to infrast
 
 <br>
 
-<a href="https://github.com/BRYANN2K/cartouche"><picture>
+<a href="https://github.com/BRYANN2K/cartouche">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cards/cartouche-dark.svg">
   <img src="assets/cards/cartouche-light.svg" width="100%" alt="Cartouche: a free game launcher for Apple silicon Macs. Steam, Epic, GOG, Amazon, Windows installers and console games in one library.">
-</picture></a>
+</picture>
+</a>
 
 <sub>[Website](https://cartouche.bryann2k.dev) &nbsp;·&nbsp; [Download](https://github.com/BRYANN2K/cartouche/releases/latest) &nbsp;·&nbsp; [Wine builds](https://github.com/BRYANN2K/cartouche-wine) &nbsp;·&nbsp; [Support on Ko-fi](https://ko-fi.com/bryann2k)</sub>
 
 #### Selected work
 
-<a href="https://github.com/BRYANN2K/stipulate-skills"><picture>
+<a href="https://github.com/BRYANN2K/stipulate-skills">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cards/stipulate-dark.svg">
   <img src="assets/cards/stipulate-light.svg" width="32%" alt="Stipulate: spec-driven development for AI coding agents">
 </picture></a>&nbsp;
@@ -34,7 +37,8 @@ Product engineer. I build products from idea to production, interface to infrast
 <a href="https://bryann2k.dev/projects/stackdeploy"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cards/stackdeploy-dark.svg">
   <img src="assets/cards/stackdeploy-light.svg" width="32%" alt="StackDeploy (paused): your own Kubernetes cluster, with the ease of a PaaS">
-</picture></a>
+</picture>
+</a>
 
 #### Upstream
 
@@ -49,10 +53,12 @@ Product engineer. I build products from idea to production, interface to infrast
 
 #### Path
 
-<a href="https://bryann2k.dev"><picture>
+<a href="https://bryann2k.dev">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cards/path-dark.svg">
   <img src="assets/cards/path-light.svg" width="100%" alt="Five years in systems and networks, a year as a freelance cloud engineer with 11 clients and 3 builds, now product engineer">
-</picture></a>
+</picture>
+</a>
 
 <sub>Specs before code. Standard tools over proprietary platforms. Working systems over slide decks.</sub>
 
