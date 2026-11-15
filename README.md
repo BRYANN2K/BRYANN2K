@@ -46,7 +46,7 @@ Product engineer. I build products from idea to production, interface to infrast
 <a href="https://github.com/search?type=pullrequests&q=is%3Apr%20is%3Amerged%20author%3ABRYANN2K%20-user%3ABRYANN2K">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cards/contributions-dark.svg">
-  <img src="assets/cards/contributions-light.svg" width="100%" alt="Upstream contributions: leoAnimesh/OpenClean, 2 merged">
+  <img src="assets/cards/contributions-light.svg" width="100%" alt="Upstream contributions: creatorsarea/promethee-companion, 1 merged; leoAnimesh/OpenClean, 2 merged">
 </picture>
 </a>
 <!-- CONTRIBUTIONS:END -->
