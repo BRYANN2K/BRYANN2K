@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the profile's SVG cards in light and dark, with live data.
 
-Cards: Cartouche hero (latest release), selected work, upstream
+Cards: Cartouche and Diazo (latest releases), selected work, upstream
 contributions (merged PRs on public repos the owner doesn't own) and the
 career path. Text is set in the display font of the name banner, subset
 per card and measured so wrapping and truncation stay exact.
@@ -198,58 +198,79 @@ CARTRIDGE = """
 """
 
 
-def hero(theme, version):
+DIAZO_MARK = """
+<mask id="dzk" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M20.5 17H31A14 14 0 0 1 31 45H20.5A1.5 1.5 0 0 1 19 43.5V18.5A1.5 1.5 0 0 1 20.5 17Z" stroke="#000" stroke-width="6"/></mask>
+<path d="M5.5 5.5H15A11.5 11.5 0 0 1 15 28.5H5.5Z" fill="none" stroke="{ink}" stroke-width="5" stroke-linejoin="round" mask="url(#dzk)"/>
+<path d="M20.5 17H31A14 14 0 0 1 31 45H20.5A1.5 1.5 0 0 1 19 43.5V18.5A1.5 1.5 0 0 1 20.5 17Z" fill="#1F5FFF"/>
+"""
+BLUE = "#1F5FFF"
+
+
+def compact_hero(theme, name, label, eyebrow, tagline, cmd, color, art, art_css="", warm=False):
+    """Compact full-width card: copy on the left, animated mark on the right."""
     t = THEMES[theme]
-    W, H = 880, 340
-    svg = Svg(W, H, "Cartouche: a free game launcher for Apple silicon Macs")
+    W, H = 880, 176
+    ax, ay = 790, 88
+    bg_a, bg_b = (t["hero_a"], t["hero_b"]) if warm else (t["card_a"], t["card_b"])
+    line = t["hero_line"] if warm else t["line"]
+    svg = Svg(W, H, label)
     svg.css.append(
         ".float{animation:float 6s ease-in-out infinite}"
-        "@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}"
-        ".shadow{transform-origin:715px 312px;animation:shadow 6s ease-in-out infinite}"
-        "@keyframes shadow{0%,100%{transform:scaleX(1);opacity:.55}50%{transform:scaleX(.82);opacity:.3}}"
-        ".shine{animation:shine 5.5s cubic-bezier(.6,0,.3,1) infinite}"
-        "@keyframes shine{0%,55%{transform:skewX(-18deg) translateX(0)}100%{transform:skewX(-18deg) translateX(820px)}}"
-        + REDUCED
+        "@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}"
+        + art_css + REDUCED
     )
     svg.add(f"""<defs>
-<linearGradient id="hbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{t['hero_a']}"/><stop offset="1" stop-color="{t['hero_b']}"/></linearGradient>
-<radialGradient id="glow" cx="715" cy="165" r="250" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="{t['hero_glow']}" stop-opacity="{t['hero_glow_op']}"/><stop offset="1" stop-color="{t['hero_glow']}" stop-opacity="0"/></radialGradient>
+<linearGradient id="hbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{bg_a}"/><stop offset="1" stop-color="{bg_b}"/></linearGradient>
+<radialGradient id="glow" cx="{ax}" cy="{ay}" r="190" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="{color}" stop-opacity="{t['hero_glow_op']}"/><stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient>
 <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="{t['hero_dot']}" fill-opacity="{t['hero_dot_op']}"/></pattern>
-<radialGradient id="fade" cx="715" cy="170" r="330" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="fade" cx="{ax}" cy="{ay}" r="260" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
 <mask id="dotmask"><rect width="{W}" height="{H}" fill="url(#fade)"/></mask>
-<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<clipPath id="label"><rect x="318" y="290" width="388" height="376" rx="30"/></clipPath>
-<clipPath id="card"><rect width="{W}" height="{H}" rx="22"/></clipPath>
-<filter id="soft" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="6"/></filter>
+<clipPath id="card"><rect width="{W}" height="{H}" rx="18"/></clipPath>
 </defs>""")
     svg.add(f'<g clip-path="url(#card)"><rect width="{W}" height="{H}" fill="url(#hbg)"/>'
             f'<rect width="{W}" height="{H}" fill="url(#dots)" mask="url(#dotmask)"/>'
             f'<rect width="{W}" height="{H}" fill="url(#glow)"/></g>')
-    svg.add(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="22" fill="none" stroke="{t["hero_line"]}"/>')
+    svg.add(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="18" fill="none" stroke="{line}"/>')
+    svg.add(art(t, ax, ay))
 
-    # cartridge
-    s = .3
-    tx, ty = 715 - 512 * s, 48 - 170 * s
-    svg.add('<g class="shadow"><ellipse cx="715" cy="312" rx="74" ry="8" fill="#000" opacity=".35" filter="url(#soft)"/></g>')
-    svg.add(f'<g class="float"><g transform="translate({tx:.1f} {ty:.1f}) scale({s})">{CARTRIDGE}</g></g>')
-
-    # copy
-    x = 52
-    eyebrow = "NOW BUILDING" + (f"  ·  {version}" if version else "")
-    svg.add(f'<circle cx="{x + 4}" cy="66" r="4" fill="{RED}"/>')
-    svg.text(x + 18, 70.5, eyebrow, 12, RED, 650, 100, 1.6)
-    svg.text(x - 3, 134, "Cartouche", 64, t["fg"], 820, 112, -1.5)
-    svg.text(x, 172, "A free game launcher for Apple silicon Macs.", 19, t["fg"], 520)
-    for i, line in enumerate(wrap("Steam, Epic, GOG and Amazon games, Windows installers and console "
-                                  "games, side by side in one native library.", 440, 15, 400)):
-        svg.text(x, 200 + i * 22, line, 15, t["muted"], 400)
-    cx = x
-    for store in ("Steam", "Epic", "GOG", "Amazon", "Windows", "Console"):
-        cx += pill(svg, cx, 254, store, t, size=12, h=26) + 8
-    cmd = "brew install --cask bryann2k/cartouche/cartouche"
-    svg.text(x, 308, "$", 12.5, RED, 700)
-    svg.text(x + 14, 308, cmd, 12.5, t["faint"], 450, 100, .2)
+    x = 40
+    svg.add(f'<circle cx="{x + 4}" cy="40" r="4" fill="{color}"/>')
+    svg.text(x + 16, 44.3, eyebrow, 11.5, color, 650, 100, 1.6)
+    svg.text(x - 2, 92, name, 42, t["fg"], 820, 112, -1)
+    svg.text(x, 120, tagline, 16, t["muted"], 450)
+    svg.text(x, 150, "$", 12, color, 700)
+    svg.text(x + 13, 150, clip(cmd, 640, 12, 450), 12, t["faint"], 450, 100, .2)
     return svg.render()
+
+
+def hero(theme, version):
+    def art(t, ax, ay):
+        s = .14
+        tx, ty = ax - 512 * s, ay - 543 * s
+        return (f'<defs><linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/>'
+                f'<stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>'
+                f'<clipPath id="label"><rect x="318" y="290" width="388" height="376" rx="30"/></clipPath></defs>'
+                f'<g class="float"><g transform="translate({tx:.1f} {ty:.1f}) scale({s})">{CARTRIDGE}</g></g>')
+    shine = (".shine{animation:shine 5.5s cubic-bezier(.6,0,.3,1) infinite}"
+             "@keyframes shine{0%,55%{transform:skewX(-18deg) translateX(0)}100%{transform:skewX(-18deg) translateX(820px)}}")
+    eyebrow = "NOW BUILDING" + (f"  ·  {version}" if version else "")
+    return compact_hero(theme, "Cartouche", "Cartouche: a free game launcher for Apple silicon Macs", eyebrow,
+                        "A free game launcher for Apple silicon Macs. Steam, Epic, GOG, Amazon and more.",
+                        "brew install --cask bryann2k/cartouche/cartouche", RED, art, shine, warm=True)
+
+
+def diazo(theme, version):
+    def art(t, ax, ay):
+        s = 2
+        ink = t["fg"] if theme == "dark" else "#15171C"
+        return (f'<g class="float"><g transform="translate({ax - 25 * s} {ay - 25 * s}) scale({s})">'
+                f'{DIAZO_MARK.format(ink=ink)}</g></g>')
+    version = (version or "").removeprefix("desktop-")
+    eyebrow = "ALPHA" + (f"  ·  {version}" if version else "")
+    return compact_hero(theme, "Diazo", "Diazo: a self-hosted design canvas for humans and AI agents", eyebrow,
+                        "A self-hosted design canvas where humans and AI agents design together, live.",
+                        "curl -fsSL https://raw.githubusercontent.com/BRYANN2K/diazo/main/scripts/install.sh | sh",
+                        BLUE, art)
 
 
 def glyph(kind, x, y, t):
@@ -290,30 +311,30 @@ def project(theme, index, name, desc, tags, kind, status=None):
 
 def contribution_card(theme, repos):
     t = THEMES[theme]
-    W, row, top = 880, 76, 24
-    H = top * 2 + max(len(repos), 1) * row + 44
+    W, row, top = 880, 52, 6
+    H = top * 2 + max(len(repos), 1) * row
     svg = Svg(W, H, "Upstream contributions: " + (", ".join(r["name"] for r in repos) or "none yet"))
-    frame(svg, t, W, H, r=20)
+    frame(svg, t, W, H, r=16)
     if not repos:
-        svg.text(36, top + 46, "Nothing merged upstream yet.", 16, t["muted"], 450)
+        svg.text(28, top + 32, "Nothing merged upstream yet.", 14, t["muted"], 450)
     for i, r in enumerate(repos):
         y = top + i * row
         if i:
-            svg.add(f'<line x1="36" y1="{y}" x2="{W - 36}" y2="{y}" stroke="{t["line"]}"/>')
+            svg.add(f'<line x1="28" y1="{y}" x2="{W - 28}" y2="{y}" stroke="{t["line"]}"/>')
         owner, repo = r["name"].split("/", 1)
-        svg.add(f'<rect x="36" y="{y + 18}" width="40" height="40" rx="11" fill="{t["pill"]}" stroke="{t["line"]}"/>')
-        svg.text(56, y + 45, repo[:1].upper(), 18, t["accent"], 800, 110, anchor="middle")
-        svg.text(96, y + 35, f"{owner} /", 14, t["faint"], 450)
-        svg.text(100 + measure(f"{owner} /", 14, 450), y + 35, repo, 16, t["fg"], 700, 104)
-        label = f"{r['count']} merged PR{'s' if r['count'] > 1 else ''}"
-        pw = measure(label, 12, 600) + 24
-        right = W - 36 - pw
-        svg.text(96, y + 57, clip(r["description"], right - 120, 14, 420), 14, t["muted"], 420)
-        svg.add(f'<rect x="{right:.1f}" y="{y + 25}" width="{pw:.1f}" height="26" rx="13" fill="none" stroke="{t["accent"]}" stroke-opacity=".55"/>')
-        svg.text(right + pw / 2, y + 42.3, label, 12, t["accent"], 600, anchor="middle")
-    svg.add(f'<line x1="0" y1="{H - 44}" x2="{W}" y2="{H - 44}" stroke="{t["line"]}"/>')
-    svg.text(36, H - 17, "Merged pull requests on public repositories  ·  refreshed daily",
-             11.5, t["faint"], 500, 100, .4)
+        svg.add(f'<rect x="28" y="{y + 12}" width="28" height="28" rx="8" fill="{t["pill"]}" stroke="{t["line"]}"/>')
+        svg.text(42, y + 31, repo[:1].upper(), 14, t["accent"], 800, 110, anchor="middle")
+        x = 70
+        svg.text(x, y + 31, f"{owner} /", 13, t["faint"], 450)
+        x += measure(f"{owner} /", 13, 450) + 4
+        svg.text(x, y + 31, repo, 15, t["fg"], 700, 104)
+        x += measure(repo, 15, 700, 104) + 14
+        label = f"{r['count']} merged"
+        pw = measure(label, 11.5, 600) + 20
+        right = W - 28 - pw
+        svg.text(x, y + 31, clip(r["description"], right - x - 16, 13, 420), 13, t["muted"], 420)
+        svg.add(f'<rect x="{right:.1f}" y="{y + 15}" width="{pw:.1f}" height="22" rx="11" fill="none" stroke="{t["accent"]}" stroke-opacity=".55"/>')
+        svg.text(right + pw / 2, y + 30, label, 11.5, t["accent"], 600, anchor="middle")
     return svg.render()
 
 
@@ -379,9 +400,11 @@ def main():
     for old in OUT.glob("*.svg"):
         old.unlink()
     version = latest_release(f"{USER}/cartouche")
+    diazo_version = latest_release(f"{USER}/diazo")
     repos = contributions()
     for theme in THEMES:
         (OUT / f"cartouche-{theme}.svg").write_text(hero(theme, version))
+        (OUT / f"diazo-{theme}.svg").write_text(diazo(theme, diazo_version))
         (OUT / f"contributions-{theme}.svg").write_text(contribution_card(theme, repos))
         (OUT / f"path-{theme}.svg").write_text(path_card(theme))
         for slug, *args in PROJECTS:

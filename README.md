@@ -23,6 +23,15 @@ Product engineer. I build products from idea to production, interface to infrast
 
 <sub>[Website](https://cartouche.bryann2k.dev) &nbsp;·&nbsp; [Download](https://github.com/BRYANN2K/cartouche/releases/latest) &nbsp;·&nbsp; [Wine builds](https://github.com/BRYANN2K/cartouche-wine) &nbsp;·&nbsp; [Support on Ko-fi](https://ko-fi.com/bryann2k)</sub>
 
+<a href="https://github.com/BRYANN2K/diazo">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cards/diazo-dark.svg">
+  <img src="assets/cards/diazo-light.svg" width="100%" alt="Diazo: a self-hosted design canvas where humans and AI agents design together, live.">
+</picture>
+</a>
+
+<sub>[Install](https://github.com/BRYANN2K/diazo#install) &nbsp;·&nbsp; [Releases](https://github.com/BRYANN2K/diazo/releases) &nbsp;·&nbsp; [Docker image](https://github.com/BRYANN2K/diazo/pkgs/container/diazo)</sub>
+
 #### Selected work
 
 <a href="https://github.com/BRYANN2K/stipulate-skills">
